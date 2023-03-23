@@ -1,6 +1,7 @@
 package controllers
 
-type User struct {
+//User model
+type User struct { 
 	ID       int    `json: "id"`
 	Name     string `json: "name"`
 	Age      int    `json: "age`
@@ -14,6 +15,7 @@ type UserResponse struct {
 	Data    User   `json:"Data"`
 }
 
+//Response
 type UsersResponse struct {
 	Status  int    `json: "id"`
 	Message string `json: "name"`
