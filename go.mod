@@ -3,7 +3,6 @@ module github.com/praktikum/Modul_Action
 go 1.19
 
 require (
-	github.com/golangci/golangci-lint-action v1.2.2 // indirect
 	github.com/labstack/echo/v4 v4.10.2 // indirect
 	github.com/labstack/gommon v0.4.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
