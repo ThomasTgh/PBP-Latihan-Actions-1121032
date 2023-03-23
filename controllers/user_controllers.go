@@ -9,7 +9,7 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-func getUsers(c echo.Context) error {
+func GetUsers(c echo.Context) error {
 	db := connect()
 	defer db.Close()
 
