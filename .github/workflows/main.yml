@@ -1,0 +1,20 @@
+# pull_request.yml
+
+name: Pull Request and Push Linting
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run golangci-lint
+      uses: docker://golangci/golangci-lint:v1.42-alpine
+      with:
+        args: golangci-lint run ./...
