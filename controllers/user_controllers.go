@@ -9,17 +9,9 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-func GetUsers(c echo.Context) error {
+func getUsers(c echo.Context) error {
 	db := connect()
 	defer db.Close()
-
-
-
-
-
-
-
-
 
 	rows,err := db.Query("SELECT * FROM users")
 	if err != nil {
@@ -27,29 +19,6 @@ func GetUsers(c echo.Context) error {
 	}
 	defer rows.Close()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
 	var user User
 	var users []User
 	for rows.Next(){
